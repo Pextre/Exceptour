@@ -92,12 +92,12 @@ img {
 }
 
 .splide__arrow {
-    background-color: var(--clr-accent1);
-    fill: #fff;
+    background-color: var(--clr-light);
+    fill: var(--clr-dark);
 }
 
 .splide__pagination__page {
-    background-color: var(--clr-semi-dark);
+    background-color: var(--clr-light);
     width: 10px;
     height: 10px;
 }
@@ -475,40 +475,50 @@ a {
 /* Sobre */
 .sobre {
     position: relative;
-    background: var(--clr-semi-light);
+    background-color: var(--clr-accent1);
 }
 
+.sobre .splide__arrow {
+    display: none;
+}
+.sobre .splide__progress__bar {
+    background-color: var(--clr-light);
+}
+
+.carrossel__container,
 .carrossel__info {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.carrossel__info {
+    row-gap: 1em;
+    margin-top: 1em;
     padding: 0 3em;
 }
 
 .carrossel__img {
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 200px;
+    max-height: 200px;
     margin: 0 auto;
-    margin-bottom: 2em;
 }
 
 .carrossel__title {
-    color: var(--clr-accent1);
+    color: var(--clr-light);
     font-weight: var(--fw-bold);
 }
 
 .carrossel__text {
-    font-size: var(--fs-body);
-    opacity: 0.75;
+    font-size: calc(var(--fs-body) - 0.1em);
+    color: var(--clr-light);
+    opacity: 0.9;
 }
 
 @media screen and (min-width: 900px) {
     .carrossel__container {
-        margin-top: 9em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: row;
     }
 
     .carrossel__img {
@@ -518,10 +528,6 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-    .carrossel__container {
-        margin-top: 5em;
-    }
-
     .carrossel__img {
         min-width: 550px;
         max-height: 550px;
@@ -529,15 +535,6 @@ a {
 }
 
 @media screen and (min-width: 1400px) {
-    .carrossel__container {
-        margin-top: 5em;
-    }
-
-    .carrossel__img {
-        min-width: 750px;
-        max-height: 750px;
-    }
-
     .carrossel__title {
         font-size: var(--fs-h2);
     }
@@ -549,3 +546,17 @@ a {
 }
 
 /* fim sobre */
+
+/* testemunhos */
+.testemunhos {
+    text-align: center;
+}
+
+.section__title--testemunhos,
+.section__subtitle--testemunhos {
+    color: var(--clr-accent1);
+}
+.section__subtitle--testemunhos {
+    opacity: 0.75;
+}
+/* fim testemunhos */
