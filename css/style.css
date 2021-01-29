@@ -91,6 +91,21 @@ img {
     background-color: var(--clr-accent2);
 }
 
+.splide__arrow {
+    background-color: var(--clr-accent1);
+    fill: #fff;
+}
+
+.splide__pagination__page {
+    background-color: var(--clr-semi-dark);
+    width: 10px;
+    height: 10px;
+}
+
+.splide__pagination__page.is-active {
+    background-color: var(--clr-dark);
+}
+
 /* fim estilo geral */
 
 /* tipografia */
@@ -365,6 +380,7 @@ a {
 }
 .section__subtitle--afiliados {
     color: var(--clr-semi-dark);
+    opacity: 0.75;
 }
 
 .planos {
@@ -461,4 +477,73 @@ a {
     position: relative;
     background: var(--clr-semi-light);
 }
+
+.carrossel__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em 3em;
+}
+
+.carrossel__img {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.carrossel__title {
+    color: var(--clr-accent1);
+    font-weight: var(--fw-bold);
+}
+
+.carrossel__text {
+    font-size: var(--fs-body);
+    opacity: 0.75;
+}
+
+@media screen and (min-width: 900px) {
+    .carrossel__container {
+        margin-top: 9em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carrossel__img {
+        min-width: 400px;
+        max-height: 400px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .carrossel__container {
+        margin-top: 5em;
+    }
+
+    .carrossel__img {
+        min-width: 550px;
+        max-height: 550px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .carrossel__container {
+        margin-top: 5em;
+    }
+
+    .carrossel__img {
+        min-width: 750px;
+        max-height: 750px;
+    }
+
+    .carrossel__title {
+        font-size: var(--fs-h2);
+    }
+
+    .carrossel__text {
+        font-size: calc(var(--fs-body + 0.5em));
+        max-width: 700px;
+    }
+}
+
 /* fim sobre */
