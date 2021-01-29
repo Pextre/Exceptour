@@ -1,0 +1,110 @@
+.carrossel {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.carrossel__links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 40%;
+    transform: translateX(-50%);
+}
+.carrossel__link {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--clr-semi-dark);
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0.2em;
+    position: relative;
+    padding-top: 0.2em;
+    z-index: 2;
+    opacity: 0.25;
+}
+
+.carrossel__link--active {
+    background-color: var(--clr-accent1);
+    opacity: 1;
+}
+
+.carrossel__itens,
+.carrossel__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.carrossel__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: var(--fs-body);
+    text-align: left;
+    padding: 0;
+    padding-left: 3em;
+    display: none;
+    opacity: 0;
+}
+
+.carrossel__item--active {
+    transition: opacity 300ms ease-in-out;
+    display: initial;
+    opacity: 1;
+}
+
+.carrossel__title {
+    color: var(--clr-accent1);
+    font-size: var(--fs-h2);
+}
+
+@media screen and (min-width: 800px) {
+    .carrossel__item--active {
+        display: grid;
+        grid-template-columns: min-content 350px;
+        grid-template-areas:
+            "title img"
+            "text img";
+        column-gap: 5em;
+    }
+
+    .carrossel__title {
+        grid-area: title;
+    }
+
+    .carrossel__text {
+        grid-area: text;
+    }
+
+    .carrossel__img {
+        grid-area: img;
+        max-height: 550px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .carrossel__links {
+        transform: translateX(-45%);
+    }
+    .carrossel__item--active {
+        display: grid;
+        grid-template-columns: min-content 550px;
+    }
+}
