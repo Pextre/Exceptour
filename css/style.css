@@ -552,11 +552,65 @@ a {
     text-align: center;
 }
 
+.testemunhos .splide__pagination__page,
+.testemunhos .splide__pagination__page.is-active,
+.testemunhos .splide__arrow {
+    display: none;
+}
+
 .section__title--testemunhos,
 .section__subtitle--testemunhos {
     color: var(--clr-accent1);
 }
 .section__subtitle--testemunhos {
     opacity: 0.75;
+    margin-bottom: 3em;
+}
+
+.testemunho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 300px;
+    position: relative;
+    opacity: 0.35;
+}
+
+.testemunho--ativo {
+    opacity: 1;
+}
+
+.testemunho::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3em;
+    width: 100%;
+    height: 5px;
+    background-color: var(--clr-accent1);
+    z-index: -1;
+}
+
+.testemunho__img {
+    max-width: 100px;
+    border-radius: 10px;
+    margin-bottom: 0.2em;
+}
+.testemunho__job {
+    opacity: 0.75;
+}
+.testemunho__texto {
+    max-width: 200px;
+}
+.testemunho__nome {
+    font-size: var(--fs-h3);
+    color: var(--clr-accent1);
+}
+
+@media screen and (min-width: 900px) {
+    .testemunho__texto {
+        max-width: 400px;
+    }
 }
 /* fim testemunhos */
