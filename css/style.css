@@ -59,7 +59,8 @@ body {
 }
 
 section,
-header {
+header,
+footer {
     padding: 5em 2em;
 }
 
@@ -614,3 +615,22 @@ a {
     }
 }
 /* fim testemunhos */
+
+/* footer */
+.footer {
+    background-color: var(--clr-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--clr-light);
+}
+
+.brand {
+    text-align: center;
+}
+.brand__copy {
+    opacity: 0.7;
+}
+
+/* fim footer */
